@@ -25,6 +25,15 @@ int main()
 	min2 = arr[1]; // ініціалізація другого мінімального значення
 	int index1 = 0, index2 = 1; // індекси мінімальних значень
 
+	if (min2 < min1) { 
+		double buf = min1;
+		min1 = min2;
+		min2 = buf;
+		buf = index1;
+		index1 = index2;
+		index2 = buf;//зміна місцями, якщо друге менше першого
+	}
+
 	for (int i = 2; i < k; i++) {
 		if (arr[i] < min1) { // перевірка на мінімальне значення
 			min2 = min1;
