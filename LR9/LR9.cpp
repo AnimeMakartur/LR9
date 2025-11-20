@@ -20,7 +20,7 @@ int main()
 		printf("You entered less than 2 numbers. Exiting the program.");
 		return 1;
 	}
-	double min1 = arr[0], min2 = arr[1];
+	double min1 = arr[0], min2 = arr[1];// оголошення змінних для зберігання мінімальних значень
 	min1 = arr[0]; // ініціалізація першого мінімального значення
 	min2 = arr[1]; // ініціалізація другого мінімального значення
 	int index1 = 0, index2 = 1; // індекси мінімальних значень
