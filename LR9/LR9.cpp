@@ -20,19 +20,12 @@ int main()
 		printf("You entered less than 2 numbers. Exiting the program.");
 		return 1;
 	}
-	double min1 = arr[0], min2 = arr[1];// оголошення змінних для зберігання мінімальних значень
-	min1 = arr[0]; // ініціалізація першого мінімального значення
-	min2 = arr[1]; // ініціалізація другого мінімального значення
-	int index1 = 0, index2 = 1; // індекси мінімальних значень
 
-	if (min2 < min1) { 
-		double buf = min1;
-		min1 = min2;
-		min2 = buf;
-		buf = index1;
-		index1 = index2;
-		index2 = buf;//зміна місцями, якщо друге менше першого
-	}
+	double min1, min2;
+	int index1, index2 ; // індекси мінімальних значень
+	arr[1] < arr[0] ? 
+		(min1 = arr[1], min2 = arr[0], index1 = 1, index2 = 0) : 
+		(min1 = arr[0], min2 = arr[1], index1 = 0, index2 = 1);// ініціалізація перших двох мінімальних значень та їх індексів
 
 	for (int i = 2; i < k; i++) {
 		if (arr[i] < min1) { // перевірка на мінімальне значення
